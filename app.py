@@ -6,13 +6,16 @@ while True:
         if total_pool == "exit":
             print(f"Goodbye,{name}")
             break
-        total_pool = int(input("Enter a number: "))
-
+        
+        total_pool = int(total_pool)
         development = total_pool * 0.80
         safety_allocation = total_pool - development
 
         print(f"Allocated to Development: {development}")
         print(f"safety_allocation: {safety_allocation}")
+        again = input("Do you want to continue? (yes/no) ")
+        if again != "yes" or "y":
+            break
+
     except ValueError:
         print("Hey! That was not a valid number. Please use  digits only")
-        break
