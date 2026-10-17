@@ -18,7 +18,9 @@ profile = ['Dev-Heavy','Balanced','Safety']
 while True:
     try:
         name = input("Enter your name: ")
-        print(f"Available Allocation Profile: {profile}")
+        for profiles in profile:
+            print(f"{profiles}")
+
         chosen_profile = input("Choose a profile from the list above: ")
 
 
