@@ -26,7 +26,7 @@ while True:
         if total_pool == "exit":
             print(f"Goodbye,{name}")
             break
-        total_pool = int(total_pool)
+        total_pool = int(total_pool, chosen_profile)
         development, safety_allocation = allocate_resources(total_pool)
     
         print(f"Allocated to Development: {development}")
