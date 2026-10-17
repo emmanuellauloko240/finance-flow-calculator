@@ -1,5 +1,12 @@
-while True:
+def allocate_resources(total_pool):
+    development = total_pool * 0.80
+    safety_allocation = total_pool - development
 
+    return development,safety_allocation
+
+    
+
+while True:
     try:
         name = input("Enter your name: ")
         total_pool = input("Enter total resource pool (or type 'exit' to quit) ): ")
@@ -7,10 +14,8 @@ while True:
             print(f"Goodbye,{name}")
             break
         
-        total_pool = int(total_pool)
-        development = total_pool * 0.80
-        safety_allocation = total_pool - development
-
+        development, safety_allocation = (total_pool )
+    
         print(f"Allocated to Development: {development}")
         print(f"safety_allocation: {safety_allocation}")
         again = input("Do you want to continue? (yes/no) ")
